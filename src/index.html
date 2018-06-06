@@ -31,7 +31,7 @@
         }
 
         .col1_span5 {
-            overflow: hidden;
+
             border-radius: 40px;
             -webkit-border-radius: 40px;
             -moz-border-radius: 40px;
@@ -47,12 +47,51 @@
 
         .content li {
             display: grid;
-            grid-template-columns: 100% auto;
+            grid-template-columns: 100% 40px;
             padding-top: 20px;
         }
 
-        .content li div {
+        .content li>div {
             line-height: 40px
+        }
+
+        .content li span {
+            position: relative;
+        }
+
+        .content li span>div {
+            height: 40px;
+            width: 40px;
+            display: block;
+            transition: all 1s;
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .demoSpan1:before,
+        .demoSpan1:after {
+            content: '';
+            height: 12px;
+            width: 40px;
+            display: block;
+            background: #333;
+            position: absolute;
+            top: 14px;
+            left: 0px;
+        }
+
+        .demoSpan1:after {
+            height: 40px;
+            width: 12px;
+            top: 0;
+            left: 14px;
+        }
+
+        .content .active {
+            top: -60px;
+            opacity: 0.1;
         }
     </style>
 </head>
